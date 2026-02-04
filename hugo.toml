@@ -1,0 +1,118 @@
+baseURL = "https://goodmangll.github.io/"
+languageCode = "zh-cn"
+title = "Silas Guo 的个人知识库"
+theme = "hugo-book"
+
+# Book theme configuration
+[params]
+  # (Optional, default light) Sets color theme: 'light', 'dark' or 'auto'.
+  BookTheme = 'auto'
+
+  # (Optional, default true) Controls source code fold/expand feature
+  BookSection = 'docs'
+
+  # (Optional, default none) Set the path to a logo for the book.
+  # If the logo is in /static/logo.png then the path would be logo.png
+  # BookLogo = 'logo.png'  # Uncomment and place logo.png in static/ directory
+
+  # (Optional, default none) Set the repository URL.
+  BookRepo = 'https://github.com/goodmangll/goodmangll.github.io'
+
+  # (Optional, default 'commit') Specifies how the 'Edit this page' link is displayed.
+  BookRepoBranch = 'main'
+
+  # (Optional, default 'Edit this page') Text for the edit link.
+  BookEditPath = 'edit/main'
+
+  # (Optional, default docs) Root section to use for the docs.
+  BookContent = true
+
+  # (Optional, default bundled) Font source for the diagrams: 'bundled' or 'web'.
+  BookFont = 'web'
+
+  # (Optional, default false) Enables search function with flexsearch.
+  BookSearch = true
+
+  # (Optional, default true) Enables searching in Chinese, Japanese and Korean.
+  BookSearchCJK = true
+
+  # (Optional, default false) Enables the copy to clipboard button.
+  BookClipboard = true
+
+  # (Optional, default false) Enables code block styling.
+  BookCodeStyle = true
+
+  # (Optional, default false) Enables Table of Contents on every page.
+  BookToC = true
+
+  # (Optional, default false) Collapsible menu sections.
+  BookCollapsibleMenu = false
+
+  # (Optional, default false) Enables navigation sections.
+  BookPortableLinks = true
+
+  # (Optional, default false) Enables social sharing.
+  BookSocial = true
+
+  # (Optional, default false) Enables the mermaid diagram library.
+  BookMermaid = true
+
+  # (Optional, default false) Enables the PlantUML diagram library.
+  BookPlantUML = true
+
+  # (Optional, default false) Enables the katex math library.
+  BookKaTeX = true
+
+  # (Optional, default false) Enables the highlightjs library.
+  BookHighlightJS = true
+
+  # (Optional, default false) Enables comments on pages.
+  BookComments = true
+
+# Giscus 评论系统配置
+[params.giscus]
+  enable = true  # 启用评论系统
+  repo = "goodmangll/goodmangll.github.io"
+  repoId = "R_kgDORINhVw"
+  category = "Announcements"
+  categoryId = "DIC_kwDORININhV84C13Hv"
+  mapping = "pathname"  # 按路径名映射
+
+# Custom styling
+[params.custom]
+  # GitHub font
+  ghfont = 'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap'
+
+# Menu configuration for Book theme
+[menu]
+  [[menu.before]]
+    name = "GitHub"
+    url = "https://github.com/goodmangll"
+    weight = 10
+    pre = '<i class="fab fa-github"></i>'
+
+# MarkDown configuration
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    style = "github"
+  [markup.tableOfContents]
+    startLevel = 1
+
+# Language configuration
+[Languages]
+  [Languages.zh-cn]
+    languageName = "中文"
+    contentDir = "content"
+    weight = 1
+    title = "Silas Guo 的个人知识库"
+    [Languages.zh-cn.params]
+      BookEditPath = 'edit/main'
+
+# Output formats
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
